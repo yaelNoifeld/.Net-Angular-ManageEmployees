@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="left">
+        <div class="card">
+            <div class="header">
+                <h2 class="animation a1">Add roles to {{employeeName}}</h2>
+                <h4 class="animation a2">Fill the form, after finish fill the form press on
+                     "Add another role", and after you finish fill all the roles press on 
+                     "Finish & Submit" </h4>
+            </div>
+            <div class="form">
+                <form [formGroup]="addRoleEmployeeForm">
+
+                    <div class="form-group">
+                        <label class="mr-sm-2" for="name">Role</label>
+                        <select class="custom-select mr-sm-2" formControlName="name" id="name">
+                            <option *ngFor="let role of roles" [value]="role.name">{{role.name}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateEntryOffice">Date entry office</label>
+                        <br>
+                        <input type="text" id="dateEntryOffice" formControlName="dateEntryOffice"
+                            onfocus="(this.type='date')" class="form-field animation a4">
+                        <ng-container *ngIf="addRoleEmployeeForm.controls['dateEntryOffice'].errors 
+                  &&(addRoleEmployeeForm.controls['dateEntryOffice'].touched||addRoleEmployeeForm.controls
+                  ['dateEntryOffice'].dirty)">
+                            <div *ngIf="addRoleEmployeeForm.controls['dateEntryOffice'].errors['required']"
+                                class="error-message">this field
+                                is required</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="isManageRole"
+                            formControlName="isManageRole">
+                        <label class="form-check-label" for="isManageRole">
+                            Is manage role?
+                        </label>
+                    </div>
+                    <br>
+                    <button (click)="addAnotherRole()" class="button-75"><span
+                            class="text">Add another role</span></button>
+                    <br>
+                    <button (click)="saveDetails()" class="button-75"><span
+                            class="text">Finish & Submit</span></button>
+                    <br>
+                    <div class="alert alert-danger" role="alert" *ngIf="errMessage">
+                        {{errMessage}}
+                    </div>
+                    <div class="alert alert-success" role="alert" *ngIf="successMessage">
+                        {{successMessage}}
+                    </div>
+                    <div class="alert alert-warning" role="alert" *ngIf="addAnotherMessage">
+                        {{addAnotherMessage}}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="right"></div>
+</div>

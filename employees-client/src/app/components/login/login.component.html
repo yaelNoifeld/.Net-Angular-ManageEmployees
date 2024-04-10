@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="container">
+        <div class="text">
+            Login
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" id="userName" formControlName="userName">
+                    <div class="underline"></div>
+                    <label for="">User name</label>
+                </div>
+                <br>
+                <div class="input-data">
+                    <input type="password" id="password" formControlName="password">
+                    <div class="underline"></div>
+                    <label for="">Password</label>
+                </div>
+            </div>
+
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" id="submit" >
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

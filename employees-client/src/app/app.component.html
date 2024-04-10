@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <span style="margin-left: 30px;"></span>
+    <button class="navbar-brand" class="btn btn-dark" role="button" (click)="login()"><strong>Login</strong></button>
+    <span style="margin-left: 30px;"></span>
+    <button class="navbar-brand" class="btn btn-dark" type="button" data-toggle="modal"
+        data-target="#exampleModalCenter" (click)="logout()"><strong>Log out</strong></button>
+    <span style="margin-left: 30px;"></span>
+    <lord-icon (click)="homepage()" src="https://cdn.lordicon.com/wmwqvixz.json" trigger="hover"
+        colors="primary:#ffffff" style="width:30px;height:30px">
+    </lord-icon>
+    <p class="text-white  ml-auto"><strong>Managment employees</strong></p>
+</nav>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">You have been successfully logged out</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Thank you for using our services. If you'd like to log in again, click on the Login button.
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+  
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #212529;
+  z-index: 1;
+}

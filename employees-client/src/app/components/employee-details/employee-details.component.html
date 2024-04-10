@@ -1,0 +1,21 @@
+<td> {{ employeeToPresent?.idCard }}</td>
+<td>{{ employeeToPresent?.lastName }}</td>
+<td >{{ employeeToPresent?.firstName }} </td>
+<td> {{ employeeToPresent?.startDate }}</td>
+<td><button class="btn btn-primary" (click)="editEmployee()">
+    <lord-icon
+    src="https://cdn.lordicon.com/oqaajvyl.json"
+    trigger="hover"
+    colors="primary:#ffffff,secondary:#ffffff"
+    style="width:20px;height:25px;">
+</lord-icon>
+</button></td>
+<td><button class="btn btn-outline-pink" (click)="deleteEmployee()">
+    <lord-icon
+        src="https://cdn.lordicon.com/vlnvqvew.json"
+        trigger="hover"
+        stroke="bold"
+        colors="primary:#ffffff,secondary:#ffffff"
+        style="width:20px;height:25px;">
+    </lord-icon>
+</button></td>

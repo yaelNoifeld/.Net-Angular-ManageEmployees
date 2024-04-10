@@ -1,0 +1,10 @@
+.navbar {
+    border-bottom: 0.4px solid rgb(176, 170, 253);
+}
+
+p {
+    margin-top: 3px;
+    margin-right: 20px;
+    size: 50px;
+    font-size: 20px;
+}
